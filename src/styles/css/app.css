@@ -1,0 +1,6 @@
+.app-container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    gap: 0;
+    height: 100vh;
+}

@@ -1,8 +1,8 @@
 
-import "../styles/css/sidebar.css";
-import Nav from "./Sidebar/Nav";
-import SidebarHeader from "./Sidebar/SidebarHeader";
-import SidebarFooter from "./Sidebar/SidebarFooter";
+import "../../styles/css/sidebar.css";
+import Nav from "./Nav";
+import SidebarHeader from "./SidebarHeader";
+import SidebarFooter from "./SidebarFooter";
 
 const Sidebar = () => {
 
