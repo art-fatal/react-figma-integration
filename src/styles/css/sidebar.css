@@ -1,0 +1,6 @@
+.sidebar{
+    width: var(--sidebar-width);
+    border-right: 1px solid #ececed;
+    height: 100vh;
+    position: relative;
+}

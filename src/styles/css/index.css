@@ -1,0 +1,11 @@
+:root {
+    --sidebar-width: 240px;
+    --sidebar-footer-height: 64px;
+    --sidebar-header-height: 55px;
+    --sidebar-nav-height: calc(100vh - var(--sidebar-header-height) - var(--sidebar-footer-height));
+}
+
+body {
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+}

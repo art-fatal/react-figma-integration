@@ -1,0 +1,41 @@
+.sidebar__footer{
+    max-height: var(--sidebar-footer-height);
+    border-top: 1px solid #ececed;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: calc( 100% - 32px );
+    background-color: #fff;
+}
+
+.account__avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.account__name{
+    font-size: 13px;
+}
+
+.sidebar__footer__item__left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 78px;
+    justify-content: space-between;
+}
+
+.sidebar__footer__item__right__button{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+}

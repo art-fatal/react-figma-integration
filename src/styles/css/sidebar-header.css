@@ -1,0 +1,7 @@
+.sidebar__header{
+    padding: 12px 8px;
+    max-height: var(--sidebar-header-height);
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ececed;
+}
