@@ -45,10 +45,13 @@
 
 .sidebar__content__item__list{
     transition: all 0.3s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top;
 }
 
 .sidebar__content__item__list.collapsed{
-    display: none;
+    /*display: none;*/
+    transform: scaleY(0);
 }
 
 .sidebar__content__item__list ul{
