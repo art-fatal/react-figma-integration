@@ -23,6 +23,9 @@
     position: relative;
 }
 
+.sidebar__content__item__title.collapsible{
+    cursor: pointer;
+}
 
 .sidebar__content__item__title span{
     height: 20px;
@@ -34,8 +37,20 @@
     width: 16px;
     position: absolute;
     right: 11px;
-    /*top: 22%;*/
 }
+
+.sidebar__content__item__title img.left{
+    cursor: pointer;
+}
+
+.sidebar__content__item__list{
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar__content__item__list.collapsed{
+    display: none;
+}
+
 .sidebar__content__item__list ul{
     margin: 0;
     padding: 0;

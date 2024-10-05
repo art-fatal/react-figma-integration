@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../styles/css/sidebar-nav.css';
 import myTemplate from "../../img/template.svg";
 import search from "../../img/search.svg";
@@ -8,6 +8,33 @@ import board from "../../img/board.png";
 import lock from "../../img/lock.png";
 import boardClass from "../../img/board-class.svg";
 import add from "../../img/add.svg";
+
+function NavItem({item}) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleCollapse = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return <div>
+        <div className={`sidebar__content__item__title ${item.collapsible ? 'collapsible' : ''}`} onClick={item.collapsible ? toggleCollapse : undefined}>
+            <img src={item.icon} alt={item.title}/>
+            <span>{item.title}</span>
+            {item.collapsible && <img className="left" src={add} alt="Collapsible"/>}
+        </div>
+        {item.items && <div className={`sidebar__content__item__list ${item.collapsible && !isOpen ? 'collapsed' : ''}`}>
+            <ul>
+                {item.items.map((item, indexS) => {
+                    return <li key={indexS} className={item.className}>
+                        <img src={item.icon} alt={item.title}/>
+                        <span>{item.title}</span>
+                    </li>
+                })}
+            </ul>
+        </div>
+        }
+    </div>;
+}
 
 function Nav() {
     const items = [
@@ -86,9 +113,7 @@ function Nav() {
         {
             title: 'My boards',
             icon: boardClass,
-            left: {
-                icon: add
-            },
+            collapsible: true,
             items: [
                 {
                     title: 'Board 1',
@@ -120,24 +145,7 @@ function Nav() {
     return <div className="sidebar__content">
         <div className="sidebar__content__item">
             {items.map((item, index) => {
-                return <div>
-                    <div className="sidebar__content__item__title" key={index}>
-                        <img src={item.icon} alt={item.title}/>
-                        <span>{item.title}</span>
-                        {item.left && <img className="left" src={item.left.icon} alt={item.left.title}/>}
-                    </div>
-                    {item.items && <div className="sidebar__content__item__list">
-                            <ul>
-                                {item.items.map((item, indexS) => {
-                                    return <li key={indexS} className={item.className}>
-                                        <img src={item.icon} alt={item.title}/>
-                                        <span>{item.title}</span>
-                                    </li>
-                                })}
-                            </ul>
-                        </div>
-                    }
-                </div>;
+                return <NavItem key={index} item={item}/>;
             })}
         </div>
     </div>

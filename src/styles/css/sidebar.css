@@ -37,12 +37,14 @@
 
 @media screen and (max-width: 1024px){
     .sidebar{
-        display: none;
         position: fixed;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
     }
 
     .sidebar--open{
         display: block;
+        transform: translateX(0);
     }
 
     .humberger-menu{

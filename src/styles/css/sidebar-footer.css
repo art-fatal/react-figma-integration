@@ -38,4 +38,11 @@
     background-color: #fff;
     border: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__footer__item__right__button:hover{
+    background-color: #f5f5f5;
 }
