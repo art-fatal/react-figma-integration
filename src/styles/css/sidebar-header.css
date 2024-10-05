@@ -9,3 +9,9 @@
 .sidebar__header img{
     height: 24px;
 }
+
+@media screen and (max-width: 1024px){
+    .sidebar__header{
+        cursor: pointer;
+    }
+}

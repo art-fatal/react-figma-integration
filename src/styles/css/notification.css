@@ -34,3 +34,22 @@
     font-size: 15px;
     line-height: 22px;
 }
+
+@media screen and (max-width: 1024px) {
+    .notification {
+        padding: 16px;
+        height: auto;
+        max-height: none;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .notification-illustration img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .notification-title {
+        text-align: center;
+    }
+}

@@ -16,6 +16,12 @@
     border-radius: 50%;
 }
 
+.personal-information-field.double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
 .input-field {
     position: relative;
     width: 100%;
@@ -60,4 +66,31 @@
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .personal-information-title {
+        text-align: center;
+    }
+    .personal-information-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        justify-items: center;
+    }
+    .personal-information-save{
+        align-self: end;
+    }
+    .item-1 {
+        order: 2;
+    }
+    .item-2 {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .personal-information-field.double {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 }
