@@ -8,6 +8,7 @@ import board from "../../img/board.png";
 import lock from "../../img/lock.png";
 import boardClass from "../../img/board-class.svg";
 import add from "../../img/add.svg";
+import minus from "../../img/minus.svg";
 
 function NavItem({item}) {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ function NavItem({item}) {
         <div className={`sidebar__content__item__title ${item.collapsible ? 'collapsible' : ''}`} onClick={item.collapsible ? toggleCollapse : undefined}>
             <img src={item.icon} alt={item.title}/>
             <span>{item.title}</span>
-            {item.collapsible && <img className="left" src={add} alt="Collapsible"/>}
+            {item.collapsible && <img className="left" src={isOpen ? minus : add} alt="Collapsible"/>}
         </div>
         {item.items && <div className={`sidebar__content__item__list ${item.collapsible && !isOpen ? 'collapsed' : ''}`}>
             <ul>
