@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.links{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: var(--regular);
+    display: flex;
+    gap: 32px;
+}
+
+.links button{
+    width: fit-content;
+}

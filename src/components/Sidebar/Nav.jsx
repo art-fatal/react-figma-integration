@@ -6,6 +6,8 @@ import star from "../../img/star.png";
 import clock from "../../img/clock.svg";
 import board from "../../img/board.png";
 import lock from "../../img/lock.png";
+import boardClass from "../../img/board-class.svg";
+import add from "../../img/add.svg";
 
 function Nav() {
     const items = [
@@ -77,7 +79,10 @@ function Nav() {
         },
         {
             title: 'My boards',
-            icon: search,
+            icon: boardClass,
+            left: {
+                icon: add
+            },
             items: [
                 {
                     title: 'Board 1',
@@ -113,9 +118,10 @@ function Nav() {
                     <div className="sidebar__content__item__title" key={index}>
                         <img src={item.icon} alt={item.title}/>
                         <span>{item.title}</span>
+                        {item.left && <img className="left" src={item.left.icon} alt={item.left.title}/>}
                     </div>
-                    {item.items && item.items.map((item, index) => {
-                        return <div className="sidebar__content__item__list" key={index}>
+                    {item.items && item.items.map((item, indexS) => {
+                        return <div className="sidebar__content__item__list" key={indexS}>
                             <ul>
                                 <li>
                                     <img src={item.icon} alt={item.title}/>

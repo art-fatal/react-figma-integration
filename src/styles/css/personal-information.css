@@ -1,0 +1,63 @@
+.personal-information {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.personal-information-content{
+    display: grid;
+    grid-template-columns:  1fr 144px;
+    gap: 16px;
+}
+
+.personal-information-avatar {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.input-field input::placeholder {
+    color: #595964;
+}
+
+.input-label {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    left: 7px;
+    color: #4C4C55;
+    background-color: #fff; /* Couleur de fond pour éviter que le texte se superpose à la bordure */
+    font-size: 11px;
+    padding: 0 5px;
+    font-weight: var(--semi-bold);
+    line-height: 14px;
+}
+
+.input-element {
+    width: 100%;
+    border: 1px solid #E3E3E4;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 22px;
+    outline: none;
+    height: 48px;
+}
+
+.input-field.checked .input-element{
+    padding-right: 38px;
+}
+.input-field.checked img {
+    position: absolute;
+    right: 12px;
+    top: calc( 50% + 4px);
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}

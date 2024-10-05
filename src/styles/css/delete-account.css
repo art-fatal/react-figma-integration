@@ -1,0 +1,25 @@
+.delete-account-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.delete-account-checkbox-label-text {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.delete-account-checkbox {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 8px;
+}
+
+.delete-account{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #E3E3E4;
+    border-radius: 8px;
+}

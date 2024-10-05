@@ -13,6 +13,7 @@
     max-height: 32px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 
@@ -22,6 +23,12 @@
     margin-left: 4px;
 }
 
+.sidebar__content__item__title img.left{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 8px;
+}
 .sidebar__content__item__list ul{
     margin: 0;
     padding: 0;
