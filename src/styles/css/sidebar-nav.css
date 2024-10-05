@@ -5,13 +5,20 @@
     max-height: var(--sidebar-nav-height);
 }
 
+.sidebar__content__item{
+    display: grid;
+    gap: 2px;
+}
+
 .sidebar__content__item__title{
     font-size: 13px;
     font-weight: bold;
     padding: 6px 4px;
-    height: 26px;
+    height: 32px;
     max-height: 32px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 4px;
     align-items: center;
     position: relative;
 }
@@ -20,14 +27,14 @@
 .sidebar__content__item__title span{
     height: 20px;
     line-height: 20px;
-    margin-left: 4px;
 }
 
 .sidebar__content__item__title img.left{
     height: 16px;
     width: 16px;
     position: absolute;
-    right: 8px;
+    right: 11px;
+    /*top: 22%;*/
 }
 .sidebar__content__item__list ul{
     margin: 0;
@@ -38,17 +45,22 @@
 .sidebar__content__item__list li{
     font-weight: normal;
     font-size: 13px;
-    padding: 0 4px;
+    padding: 6px 4px;
     height: 32px;
     max-height: 32px;
     align-items: center;
     display: flex;
+    gap: 6px;
+}
+
+.sidebar__content__item__list li.past-search{
+    height: 28px;
+    gap: 4px;
 }
 
 .sidebar__content__item__list li > span{
     height: 20px;
     line-height: 20px;
-    margin-left: 4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -5,3 +5,7 @@
     flex-direction: row;
     border-bottom: 1px solid #ececed;
 }
+
+.sidebar__header img{
+    height: 24px;
+}

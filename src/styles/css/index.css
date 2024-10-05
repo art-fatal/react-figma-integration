@@ -4,7 +4,7 @@
     --info-color: #595964;
     --sidebar-width: 240px;
     --sidebar-footer-height: 64px;
-    --sidebar-header-height: 55px;
+    --sidebar-header-height: 48px;
     --sidebar-nav-height: calc(100vh - var(--sidebar-header-height) - var(--sidebar-footer-height));
     --semi-bold: 600;
     --regular: 300;

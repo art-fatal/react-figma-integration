@@ -11,7 +11,7 @@ const DeleteAccount = () => {
             </label>
             </div>
             <div className="delete-account">
-                <div className="gap-2">
+                <div className="gap-2 flex flex-col">
                     <h5 className="delete-account-title">Delete account</h5>
                     <p className="delete-account-content">
                         If you delete your account you’ll be permanently removing it from our systems - you can’t undo

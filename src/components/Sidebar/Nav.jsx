@@ -28,11 +28,11 @@ function Nav() {
                     icon: star,
                 },
                 {
-                    title: 'Network engineer',
+                    title: 'Network Engineer',
                     icon: star,
                 },
                 {
-                    title: 'Technical support',
+                    title: 'Technical Support',
                     icon: star,
                 },
                 {
@@ -53,26 +53,32 @@ function Nav() {
                 },
                 {
                     title: 'Past search 1',
+                    className: 'past-search',
                     icon: clock,
                 },
                 {
                     title: 'Past search 2',
+                    className: 'past-search',
                     icon: clock,
                 },
                 {
                     title: 'Computers and information...',
+                    className: 'past-search',
                     icon: clock,
                 },
                 {
                     title: 'Database Administrator',
+                    className: 'past-search',
                     icon: clock,
                 },
                 {
                     title: 'Computer security',
+                    className: 'past-search',
                     icon: clock,
                 },
                 {
                     title: 'Computer Systems Analyst',
+                    className: 'past-search',
                     icon: clock,
                 },
             ],
@@ -114,26 +120,28 @@ function Nav() {
     return <div className="sidebar__content">
         <div className="sidebar__content__item">
             {items.map((item, index) => {
-                return <>
+                return <div>
                     <div className="sidebar__content__item__title" key={index}>
                         <img src={item.icon} alt={item.title}/>
                         <span>{item.title}</span>
                         {item.left && <img className="left" src={item.left.icon} alt={item.left.title}/>}
                     </div>
-                    {item.items && item.items.map((item, indexS) => {
-                        return <div className="sidebar__content__item__list" key={indexS}>
+                    {item.items && <div className="sidebar__content__item__list">
                             <ul>
-                                <li>
-                                    <img src={item.icon} alt={item.title}/>
-                                    <span>{item.title}</span>
-                                </li>
+                                {item.items.map((item, indexS) => {
+                                    return <li key={indexS} className={item.className}>
+                                        <img src={item.icon} alt={item.title}/>
+                                        <span>{item.title}</span>
+                                    </li>
+                                })}
                             </ul>
-                        </div>;
-                    })}
-                </>;
+                        </div>
+                    }
+                </div>;
             })}
         </div>
-    </div>;
+    </div>
+        ;
 }
 
 export default Nav;

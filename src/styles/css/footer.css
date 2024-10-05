@@ -2,6 +2,12 @@
     display: flex;
     gap: 16px;
     flex-direction: column;
+    position: sticky;
+    bottom: -32px;
+    background-color: #fff;
+    box-sizing: content-box;
+    padding: 8px 0 16px 0;
+    z-index: 99;
 }
 
 .links{
@@ -13,5 +19,8 @@
 }
 
 .links button{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: var(--regular);
     width: fit-content;
 }
